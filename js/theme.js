@@ -20,34 +20,9 @@ if (isBreakPoint(480)) {
     	  $("html, body").css({
     		height: $(window).height()
     		});
-        $('a[href^="#down"]').on('click',function (e) {
-            e.preventDefault();
-
-            var target = this.hash;
-            var $target = $(target);
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top-50
-            }, 900, 'swing', function () {
-                window.location.hash = target;
-            });
-        });
-        $('a[href^="#up"]').on('click',function (e) {
-            e.preventDefault();
-
-            var target = this.hash;
-            var $target = $(target);
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, 900, 'swing', function () {
-                window.location.hash = target;
-            });
-        });
-
 }
 jQuery(document).ready(function(){
-  $('a[href^="#down"]').on('click',function (e) {
+  $('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 
 	    var target = this.hash;
@@ -55,7 +30,7 @@ jQuery(document).ready(function(){
 
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top-50
-	    }, 900, 'swing', function () {
+	    }, 450, 'swing', function () {
 	        window.location.hash = target;
 	    });
 	});
@@ -67,7 +42,7 @@ jQuery(document).ready(function(){
 
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
+	    }, 450, 'swing', function () {
 	        window.location.hash = target;
 	    });
 	});
